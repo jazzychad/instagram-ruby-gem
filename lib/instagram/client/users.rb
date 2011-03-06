@@ -161,5 +161,18 @@ module Instagram
       response = get("users/#{id}/media/recent", options)
       response["data"]
     end
+
+
+    def user_relationship(id)
+      response = get("users/#{id}/relationship", options)
+      response["data"]
+    end
+
+    def user_modify_relationship(id, action, options={})
+      response = post("users/#{id}/relationship", options.merge(:action => action))
+      response["data"]
+    end
+
+
   end
 end

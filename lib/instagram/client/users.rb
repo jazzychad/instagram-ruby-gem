@@ -163,6 +163,7 @@ module Instagram
     end
 
 
+    #cbe
     def user_relationship(id)
       response = get("users/#{id}/relationship", options)
       response["data"]
